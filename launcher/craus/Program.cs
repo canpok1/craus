@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using craus.Util;
 using Craus.Util;
+using Craus.Model;
 
-namespace craus
+namespace Craus
 {
     static class Program
     {
@@ -15,18 +15,22 @@ namespace craus
         [STAThread]
         static void Main()
         {
-            ILoggerFactory factory = new StandardLoggerFactory( ConsoleLogger.LogLevel.DEBUG );
-            ILogger logger = factory.Create( System.Reflection.MethodBase.GetCurrentMethod().DeclaringType );
+            LogUtil.SetFactory( new StandardLoggerFactory( ConsoleLogger.LogLevel.DEBUG ) );
+
+            ILogger logger = LogUtil.GetLogger();
 
             logger.Start();
-            logger.Debug( "デバッグ" );
-            logger.Info( "インフォ" );
-            logger.Warn( new Exception( "警告" ) );
-            logger.Fatal( new Exception( "致命的" ) );
+            logger.Debug( "DEBUGレベルは出力対象" );
+            logger.Info( "INFOレベルは出力対象" );
+            logger.Warn( new Exception( "WARNレベルは出力対象" ) );
+            logger.Fatal( new Exception( "FATALレベルは出力対象" ) );
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            CommandExecuter executer = new CommandExecuter();
+            executer.Execute( "calc", "" );
+
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Form1());
 
             logger.End();
 

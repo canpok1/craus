@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Craus.Util;
 
-namespace craus.Util
+namespace Craus.Util
 {
     /// <summary>
     /// ロガー生成機能を提供するインターフェースです。

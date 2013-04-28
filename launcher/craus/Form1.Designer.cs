@@ -1,4 +1,4 @@
-﻿namespace craus
+﻿namespace Craus
 {
     partial class Form1
     {

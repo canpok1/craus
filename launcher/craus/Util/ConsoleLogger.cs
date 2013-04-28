@@ -5,7 +5,7 @@ using System.Text;
 using Craus.Util;
 using System.Diagnostics;
 
-namespace craus.Util
+namespace Craus.Util
 {
     /// <summary>
     /// コンソールに出力するロガーです。
@@ -54,7 +54,7 @@ namespace craus.Util
                 StackFrame callerFrame = new StackFrame( 1 );
                 String methodName = callerFrame.GetMethod().Name;
 
-                this.Log( methodName + " 開始" );
+                this.Log( "開始", methodName, LogLevel.DEBUG );
             }
         }
 
@@ -66,7 +66,7 @@ namespace craus.Util
                 StackFrame callerFrame = new StackFrame( 1 );
                 String methodName = callerFrame.GetMethod().Name;
 
-                this.Log( methodName + " 終了" );
+                this.Log( "終了", methodName, LogLevel.DEBUG );
             }
         }
 
@@ -78,7 +78,7 @@ namespace craus.Util
                 StackFrame callerFrame = new StackFrame( 1 );
                 String methodName = callerFrame.GetMethod().Name;
 
-                this.Log( methodName + " " + msg );
+                this.Log( msg, methodName, LogLevel.DEBUG );
             }
         }
 
@@ -91,7 +91,7 @@ namespace craus.Util
                 StackFrame callerFrame = new StackFrame( 1 );
                 String methodName = callerFrame.GetMethod().Name;
 
-                this.Log( methodName + " " + msg );
+                this.Log( msg, methodName, LogLevel.INFO );
             }
         }
 
@@ -105,7 +105,7 @@ namespace craus.Util
                 StackFrame callerFrame = new StackFrame( 1 );
                 String methodName = callerFrame.GetMethod().Name;
 
-                this.Log( methodName + " " + e.Message );
+                this.Log( e.Message, methodName, LogLevel.WARN );
             }
         }
 
@@ -120,7 +120,7 @@ namespace craus.Util
                 StackFrame callerFrame = new StackFrame( 1 );
                 String methodName = callerFrame.GetMethod().Name;
 
-                this.Log( methodName + " " + e.Message );
+                this.Log( e.Message, methodName, LogLevel.FATAL );
             }
         }
 
@@ -128,23 +128,30 @@ namespace craus.Util
         /// ログを出力します。
         /// </summary>
         /// <param name="msg">出力メッセージ</param>
-        private void Log( String msg )
+        private void Log( String msg, String methodName, LogLevel level )
         {
-            switch( this.level )
+            String levelString = "";
+            switch( level )
             {
                 case LogLevel.DEBUG:
-                    System.Console.WriteLine( "[DEBUG]" + msg );
+                    levelString = "[DEBUG]";
                     break;
                 case LogLevel.INFO:
-                    System.Console.WriteLine( "[INFO ]" + msg );
+                    levelString = "[INFO ]";
                     break;
                 case LogLevel.WARN:
-                    System.Console.WriteLine( "[WARN ]" + msg );
+                    levelString = "[WARN ]";
                     break;
                 case LogLevel.FATAL:
-                    System.Console.WriteLine( "[FATAL]" + msg );
+                    levelString = "[FATAL]";
                     break;
             }
+
+            System.Console.WriteLine(
+                                    levelString 
+                                    + this.classType.ToString() 
+                                    + "." + methodName
+                                    + " " + msg );
         }
     }
 }
