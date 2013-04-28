@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Craus.Util;
 using Craus.Model;
+using Craus.View;
 
 namespace Craus
 {
@@ -28,9 +29,9 @@ namespace Craus
             CommandExecuter executer = new CommandExecuter();
             executer.Execute( "calc", "" );
 
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault( false );
+            Application.Run( new GroupForm() );
 
             logger.End();
 
