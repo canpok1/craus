@@ -9,7 +9,7 @@ namespace Craus.Util
     /// <summary>
     /// コンソールに出力するロガーを生成するクラスです。
     /// </summary>
-    class StandardLoggerFactory : ILoggerFactory
+    public class StandardLoggerFactory : ILoggerFactory
     {
         /// <summary>
         /// 出力するログレベル

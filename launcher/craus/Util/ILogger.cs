@@ -8,7 +8,7 @@ namespace Craus.Util
     /// <summary>
     /// ログ記録機能を提供するインターフェースです。
     /// </summary>
-    interface ILogger
+    public interface ILogger
     {
         /// <summary>
         /// メソッド開始ログ

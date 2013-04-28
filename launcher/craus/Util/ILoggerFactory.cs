@@ -9,7 +9,7 @@ namespace Craus.Util
     /// <summary>
     /// ロガー生成機能を提供するインターフェースです。
     /// </summary>
-    interface ILoggerFactory
+    public interface ILoggerFactory
     {
         /// <summary>
         /// ロガーを生成します。

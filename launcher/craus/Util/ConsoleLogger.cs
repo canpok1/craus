@@ -10,7 +10,7 @@ namespace Craus.Util
     /// <summary>
     /// コンソールに出力するロガーです。
     /// </summary>
-    class ConsoleLogger : ILogger
+    public class ConsoleLogger : ILogger
     {
         public enum LogLevel
         {
@@ -46,6 +46,9 @@ namespace Craus.Util
             this.level = level;
         }
 
+        /// <summary>
+        /// メソッドの開始用のログ
+        /// </summary>
         public void Start()
         {
             if( this.level == LogLevel.DEBUG )
@@ -58,6 +61,9 @@ namespace Craus.Util
             }
         }
 
+        /// <summary>
+        /// メソッドの終了用のログ
+        /// </summary>
         public void End()
         {
             if( this.level == LogLevel.DEBUG )
