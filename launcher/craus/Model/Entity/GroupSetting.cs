@@ -77,5 +77,14 @@ namespace Craus.Model.Entity
                 return null;
             }
         }
+
+        /// <summary>
+        /// 全設定値のコピーを取得します。
+        /// </summary>
+        /// <returns>全設定値のコピー</returns>
+        public List<GroupSettingItem> GetAll()
+        {
+            return new List<GroupSettingItem>( this.items.Values );
+        }
     }
 }

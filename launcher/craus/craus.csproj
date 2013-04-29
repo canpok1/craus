@@ -47,6 +47,7 @@
     <Compile Include="Model\CommandExecuter.cs" />
     <Compile Include="Model\Entity\GroupSetting.cs" />
     <Compile Include="Model\Entity\GroupSettingItem.cs" />
+    <Compile Include="Model\Entity\ImmutableGroupSetting.cs" />
     <Compile Include="Model\Entity\ImmutableLauncherSetting.cs" />
     <Compile Include="Model\Entity\LauncherSetting.cs" />
     <Compile Include="Model\Entity\ShortcutSettingItem.cs" />

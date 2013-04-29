@@ -17,7 +17,7 @@ namespace CrausTest.Model.Entity
         private LauncherSetting createSetting()
         {
             var setting = new LauncherSetting();
-            setting.Set( LauncherSetting.Key.WINDOW_HEIGHT, 100);
+            setting.Set( LauncherSetting.Key.WINDOW_HEIGHT, 100 );
             setting.Set( LauncherSetting.Key.WINDOW_WIDTH, 200 );
             return setting;
         }
@@ -80,6 +80,19 @@ namespace CrausTest.Model.Entity
             this.checkGetStringSameValue( immutable, mutable, LauncherSetting.Key.WINDOW_WIDTH );
             this.checkGetIntSameValue( immutable, mutable, LauncherSetting.Key.WINDOW_HEIGHT );
             this.checkGetIntSameValue( immutable, mutable, LauncherSetting.Key.WINDOW_WIDTH );
+        }
+
+        [Test]
+        public void ImmutableTest()
+        {
+            var mutable = this.createSetting();
+            var immutable = new ImmutableLauncherSetting( mutable);
+
+            var key = LauncherSetting.Key.WINDOW_WIDTH;
+            int newWidth = mutable.GetInt( key ) + 4;
+            mutable.Set( key, newWidth );
+
+            Assert.AreNotEqual( mutable.GetInt( key ), immutable.GetInt( key ) );
         }
     }
 
