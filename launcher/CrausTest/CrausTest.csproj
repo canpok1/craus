@@ -45,6 +45,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\CommandExecuterTest.cs" />
+    <Compile Include="Model\Entity\GroupSettingTest.cs" />
+    <Compile Include="Model\Entity\GroupSettingItemTest.cs" />
+    <Compile Include="Model\Entity\ImmutableGroupSettingTest.cs" />
+    <Compile Include="Model\Entity\ImmutableLauncherSettingTest.cs" />
+    <Compile Include="Model\Entity\ImmutableShortcutSettingTest.cs" />
+    <Compile Include="Model\Entity\LauncherSettingTest.cs" />
+    <Compile Include="Model\Entity\SettingContainerForImmutableTest.cs" />
+    <Compile Include="Model\Entity\SettingContainerForMutableTest.cs" />
+    <Compile Include="Model\Entity\ShortcutSettingItemTest.cs" />
+    <Compile Include="Model\Entity\ShortcutSettingTest.cs" />
+    <Compile Include="Model\SettingIOTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +64,7 @@
       <Name>Craus</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

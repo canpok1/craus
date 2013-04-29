@@ -46,20 +46,12 @@ namespace Craus.Model
                 this.logger.Start();
 
                 ProcessStartInfo psInfo = new ProcessStartInfo();
-
-                if( String.IsNullOrEmpty( param ) )
-                {
-                    psInfo.FileName = path;
-                }
-                else
-                {
-                    psInfo.FileName = path + " " + param;
-                }
-
+                psInfo.FileName = CommandExecuter.BuildCommand( path, param );
                 psInfo.CreateNoWindow = true;   // コンソールウィンドウを開かない
                 psInfo.UseShellExecute = false; // シェル機能を使用しない
 
                 this.logger.Debug( "コマンドを実行[" + psInfo.FileName + "]" );
+
                 Process.Start( psInfo );
             }
             // TODO [実装]例外処理
@@ -67,6 +59,28 @@ namespace Craus.Model
             {
                 this.logger.End();
             }
+        }
+
+        /// <summary>
+        /// コマンドを組み立てます。
+        /// 引数で渡されたパラメータをスペース区切りで連結します。
+        /// </summary>
+        /// <param name="commands">コマンド</param>
+        /// <returns>コマンド</returns>
+        public static String BuildCommand( params String[] commands )
+        {
+            StringBuilder commandBuilder = new StringBuilder();
+
+            foreach( String param in commands )
+            {
+                if( commandBuilder.Length != 0 )
+                {
+                    commandBuilder.Append( " " );
+                }
+                commandBuilder.Append( param );
+            }
+
+            return commandBuilder.ToString();
         }
     }
 }

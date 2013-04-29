@@ -31,6 +31,17 @@ namespace CrausTest.Model
         {
             this.executer.Execute( "", "" );
         }
+
+        [Test]
+        public void BuildCommand()
+        {
+            String arg1 = "aaaa.exe";
+            String arg2 = "-f";
+            String arg3 = @"c:\ファイル";
+
+            Assert.AreEqual( arg1 + " " + arg2 + " " + arg3,
+                             CommandExecuter.BuildCommand( arg1, arg2, arg3 ) );
+        }
     }
 
 }
