@@ -47,7 +47,7 @@ namespace Craus.Model.Entity
                 throw new ArgumentException( "param.GroupIdが不正" );
             }
 
-            this.param = param;
+            this.param = new Param( param );
         }
 
         /// <summary>

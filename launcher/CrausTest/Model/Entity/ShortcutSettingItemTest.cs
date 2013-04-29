@@ -75,7 +75,7 @@ namespace CrausTest.Model.Entity
         {
             var item = new ShortcutSettingItem( this.param );
             this.param.Option = "new option";
-            Assert.AreEqual( param.Option, item.GetOption() );
+            Assert.AreNotEqual( param.Option, item.GetOption() );
         }
 
         [Test]
@@ -83,7 +83,7 @@ namespace CrausTest.Model.Entity
         {
             var item = new ShortcutSettingItem( this.param );
             this.param.GroupId = 5;
-            Assert.AreEqual( param.GroupId, item.GetGroupId() );
+            Assert.AreNotEqual( param.GroupId, item.GetGroupId() );
         }
 
     }

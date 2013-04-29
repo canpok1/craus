@@ -62,7 +62,5 @@ namespace CrausTest.Model.Entity
             this.setting.GetInt( key );
         }
 
-        // TODO [実装]
-
     }
 }
