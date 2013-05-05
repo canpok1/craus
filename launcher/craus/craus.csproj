@@ -50,6 +50,7 @@
     <Compile Include="Model\Entity\ImmutableGroupSetting.cs" />
     <Compile Include="Model\Entity\ImmutableLauncherSetting.cs" />
     <Compile Include="Model\Entity\LauncherSetting.cs" />
+    <Compile Include="Model\Entity\ShortcutSetting.cs" />
     <Compile Include="Model\Entity\ShortcutSettingItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

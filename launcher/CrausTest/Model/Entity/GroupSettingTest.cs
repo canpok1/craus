@@ -51,19 +51,16 @@ namespace CrausTest.Model.Entity
         }
 
         [Test]
-        public void GetAllTest()
+        public void GetAllで追加した数分が取得できる()
         {
-            var item1 = this.createItem( 1, "test1" );
-            var item2 = this.createItem( 2, "test2" );
-
-            this.setting.Set( item1 );
-            this.setting.Set( item2 );
+            this.setting.Set( this.createItem( 1, "test1" ) );
+            this.setting.Set( this.createItem( 2, "test2" ) );
 
             Assert.AreEqual( 2, this.setting.GetAll().Count );
         }
 
         [Test]
-        public void GetAllIsReturnCopyTest()
+        public void GetAllの戻り値に要素を追加しても影響ない()
         {
             this.setting.Set( this.createItem( 1, "test1" ) );
 
@@ -74,15 +71,20 @@ namespace CrausTest.Model.Entity
         }
 
         [Test]
-        public void ImmutableTest()
+        public void コピーコンストラクタで作ったのが同じ値を持つ()
         {
-            var item1 = this.createItem( 1, "test1" );
-            var item2 = this.createItem( 2, "test2" );
+            this.setting.Set( this.createItem( 1, "test1" ) );
+            var copy = new GroupSetting( this.setting );
+            Assert.IsTrue( copy.Get(1).Equals( this.setting.Get(1) ) );
+        }
 
-            this.setting.Set( item1 );
+        [Test]
+        public void コピーにSetしてもオリジナルに影響しない()
+        {
+            this.setting.Set( this.createItem( 1, "test1" ) );
             var copy = new GroupSetting( this.setting );
 
-            this.setting.Set( item2 );
+            this.setting.Set( this.createItem( 2, "test2" ) );
 
             Assert.AreNotEqual( copy.GetAll().Count, this.setting.GetAll().Count );
         }
