@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
   <TopNode>[0-1000]C:\workspaces\craus\launcher\CrausTest\CrausTest.nunit</TopNode>
-  <SelectedNode>[0-1047]CrausTest.Model</SelectedNode>
+  <SelectedNode>[0-1059]CrausTest.Model</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
     <Node UniqueName="[0-1000]C:\workspaces\craus\launcher\CrausTest\CrausTest.nunit" Expanded="true" />
-    <Node UniqueName="[0-1045]C:\workspaces\craus\launcher\CrausTest\bin\Debug\CrausTest.dll" Expanded="true" />
-    <Node UniqueName="[0-1046]CrausTest" Expanded="true" />
-    <Node UniqueName="[0-1047]CrausTest.Model" Expanded="true" />
-    <Node UniqueName="[0-1001]CrausTest.Model.CommandExecuterTest" Expanded="true" />
-    <Node UniqueName="[0-1048]CrausTest.Model.Entity" Expanded="true" />
+    <Node UniqueName="[0-1057]C:\workspaces\craus\launcher\CrausTest\bin\Debug\CrausTest.dll" Expanded="true" />
+    <Node UniqueName="[0-1058]CrausTest" Expanded="true" />
+    <Node UniqueName="[0-1059]CrausTest.Model" Expanded="true" />
+    <Node UniqueName="[0-1060]CrausTest.Model.Entity" Expanded="true" />
   </Nodes>
 </VisualState>

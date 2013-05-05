@@ -55,6 +55,7 @@
     <Compile Include="Model\Entity\SettingContainerForMutable.cs" />
     <Compile Include="Model\Entity\ShortcutSetting.cs" />
     <Compile Include="Model\Entity\ShortcutSettingItem.cs" />
+    <Compile Include="Model\SettingIO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\ConsoleLogger.cs" />
