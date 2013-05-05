@@ -12,8 +12,6 @@ namespace CrausTest.Model.Entity
     [TestFixture]
     class ImmutableGroupSettingTest
     {
-        // TODO [実装]
-
         /// <summary>
         /// GroupSettingItemを生成
         /// </summary>
