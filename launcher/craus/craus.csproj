@@ -51,6 +51,8 @@
     <Compile Include="Model\Entity\ImmutableLauncherSetting.cs" />
     <Compile Include="Model\Entity\ImmutableShortcutSetting.cs" />
     <Compile Include="Model\Entity\LauncherSetting.cs" />
+    <Compile Include="Model\Entity\SettingContainerForImmutable.cs" />
+    <Compile Include="Model\Entity\SettingContainerForMutable.cs" />
     <Compile Include="Model\Entity\ShortcutSetting.cs" />
     <Compile Include="Model\Entity\ShortcutSettingItem.cs" />
     <Compile Include="Program.cs" />
