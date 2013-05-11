@@ -11,7 +11,7 @@ namespace Craus.Controller
     /// <summary>
     /// 設定系の操作クラス
     /// </summary>
-    class SettingController
+    public class SettingController
     {
         private ILogger logger = null;
 

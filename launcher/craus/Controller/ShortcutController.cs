@@ -9,7 +9,7 @@ namespace Craus.Controller
     /// <summary>
     /// ショートカット系の操作クラス
     /// </summary>
-    class ShortcutController
+    public class ShortcutController
     {
         private ILogger logger = null;
 

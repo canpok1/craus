@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Craus.Util;
 using Craus.Model;
 using Craus.View;
+using Craus.Controller;
 
 namespace Craus
 {
@@ -26,15 +27,25 @@ namespace Craus
             logger.Warn( new Exception( "WARNレベルは出力対象" ) );
             logger.Fatal( new Exception( "FATALレベルは出力対象" ) );
 
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault( false );
+            Application.Run( createStartForm() );
+
+            logger.End();
+        }
+
+        /// <summary>
+        /// 最初に表示するフォームを生成します。
+        /// </summary>
+        /// <returns>フォーム</returns>
+        private static Form createStartForm()
+        {
             var io = new SettingIO();
             var setting = io.Load();
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault( false );
-            Application.Run( new GroupForm() );
+            var controller = new GroupController();
 
-            logger.End();
-
+            return new GroupForm( setting, controller );
         }
     }
 }

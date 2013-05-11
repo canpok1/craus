@@ -9,7 +9,7 @@ namespace Craus.Controller
     /// <summary>
     /// グループ系の操作クラス
     /// </summary>
-    class GroupController
+    public class GroupController
     {
         private ILogger logger = null;
 
