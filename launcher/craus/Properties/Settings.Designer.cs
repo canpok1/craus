@@ -22,5 +22,23 @@ namespace Craus.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("480")]
+        public string WINDOW_HEIGHT {
+            get {
+                return ((string)(this["WINDOW_HEIGHT"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("320")]
+        public string WINDOW_WIDTH {
+            get {
+                return ((string)(this["WINDOW_WIDTH"]));
+            }
+        }
     }
 }

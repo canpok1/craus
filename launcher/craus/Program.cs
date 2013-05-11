@@ -26,8 +26,8 @@ namespace Craus
             logger.Warn( new Exception( "WARNレベルは出力対象" ) );
             logger.Fatal( new Exception( "FATALレベルは出力対象" ) );
 
-            CommandExecuter executer = new CommandExecuter();
-            executer.Execute( "calc", "" );
+            var io = new SettingIO();
+            var setting = io.Load();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault( false );
