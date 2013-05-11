@@ -126,7 +126,7 @@ namespace Craus.Model
         /// <param name="setting">設定値</param>
         /// <returns>true:保存成功 false:保存失敗</returns>
         /// <exception cref="ArgumentNullException">引数または設定値がnullの場合</exception>
-        public Boolean Save( SettingContainerForMutable setting )
+        public bool Save( SettingContainerForMutable setting )
         {
             if( setting == null )
             {

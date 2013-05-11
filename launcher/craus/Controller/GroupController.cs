@@ -6,6 +6,9 @@ using Craus.Util;
 
 namespace Craus.Controller
 {
+    /// <summary>
+    /// グループ系の操作クラス
+    /// </summary>
     class GroupController
     {
         private ILogger logger = null;
