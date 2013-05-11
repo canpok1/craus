@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\GroupController.cs" />
+    <Compile Include="Controller\SettingController.cs" />
+    <Compile Include="Controller\ShortcutController.cs" />
     <Compile Include="Model\CommandExecuter.cs" />
     <Compile Include="Model\Entity\GroupSetting.cs" />
     <Compile Include="Model\Entity\GroupSettingItem.cs" />
