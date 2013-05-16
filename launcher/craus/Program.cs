@@ -40,12 +40,7 @@ namespace Craus
         /// <returns>フォーム</returns>
         private static Form createStartForm()
         {
-            var io = new SettingIO();
-            var setting = io.Load();
-
-            var controller = new GroupController();
-
-            return new GroupForm( setting, controller );
+            return new GroupController().CreateGroupForm();
         }
     }
 }

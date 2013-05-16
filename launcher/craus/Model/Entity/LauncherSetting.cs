@@ -17,6 +17,7 @@ namespace Craus.Model.Entity
         {
             WINDOW_WIDTH,
             WINDOW_HEIGHT,
+            SHORTCUT_CONF_FILE,
         }
 
         /// <summary>

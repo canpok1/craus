@@ -46,5 +46,30 @@ namespace Craus.View
 
             // TODO [実装]各種イベントを実装
         }
+
+        /// <summary>
+        /// キーが押された時のイベント
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GroupForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            this.logger.Debug("KeyDownイベント発生");
+            if (e.KeyData == Keys.Escape)
+            {
+                this.logger.Debug("Escが押されました。");
+                this.Close();
+            }
+        }
+
+        /// <summary>
+        /// キーが離された時のイベント
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GroupForm_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
